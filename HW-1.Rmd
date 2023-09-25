@@ -1,0 +1,40 @@
+---
+title: "HW-1"
+author: "shivangsingh.manhas@rutgers.edu"
+date: "9/22/2023"
+---
+
+# Importing a Data Frame
+
+```{r}
+
+library(readxl)
+ 
+gfg_data=read_excel('Typical_Employee_Survey_Data.xlsx')
+ 
+gfg_data
+
+## Adding header Rows to every column
+
+colnames(Typical_Employee_Survey_Data) <- c("Age", "Gender", "JobSatisfaction", "JobCharacteristic", "WorkExperience", "Promotion", "DecisionMaking", "BudgetaryDecisions", "Proud", "RejectingOtherJobs", "Relations")
+
+## Summary and Box plot for Age
+
+min(Typical_Employee_Survey_Data$Age)
+max(Typical_Employee_Survey_Data$Age)
+mean(Typical_Employee_Survey_Data$Age)
+fivenum(Typical_Employee_Survey_Data$Age)
+summary(Typical_Employee_Survey_Data$Age)
+boxplot(Typical_Employee_Survey_Data$Age)
+
+## Summary and Box plot for Work Experience
+
+min(Typical_Employee_Survey_Data$WorkExperience)
+max(Typical_Employee_Survey_Data$WorkExperience)
+mean(Typical_Employee_Survey_Data$WorkExperience)
+fivenum(Typical_Employee_Survey_Data$WorkExperience)
+summary(Typical_Employee_Survey_Data$WorkExperience)
+boxplot(Typical_Employee_Survey_Data$WorkExperience)
+
+```
+
